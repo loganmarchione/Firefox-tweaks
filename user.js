@@ -40,6 +40,12 @@ user_pref("browser.onboarding.enabled", false);
 // Enable spellchecker
 user_pref("layout.spellcheckDefault", 2);
 
+// Disable media autoplay
+user_pref("media.autoplay.enabled", false);
+
+// Enable click to play for plugins
+user_pref("plugins.click_to_play", true);
+
 // Disable new tab page ads and preload
 user_pref("browser.newtab.preload", false);
 user_pref("browser.newtabpage.enabled", false);
@@ -59,6 +65,10 @@ user_pref("webgl.disabled", true);
 
 // Show punycode
 user_pref("network.IDN_show_punycode", true);
+
+// Disable WebRTC
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.navigator.enabled", false);
 
 // Resist fingerprinting
 user_pref("privacy.resistFingerprinting", true);
