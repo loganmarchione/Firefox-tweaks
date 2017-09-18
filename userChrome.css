@@ -3,6 +3,18 @@
  */
 
 .tabbrowser-tab {
-    min-width: 16px !important;
-    clip-width: 16px !important;
+  min-width: 1em !important;
+  clip-width: 1em !important;
+}
+
+/*
+ * Only show close buttons on background tabs when hovering with the mouse
+ */
+
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
 }
