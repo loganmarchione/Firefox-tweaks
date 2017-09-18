@@ -1,0 +1,8 @@
+/*
+ * Prevent Tab Overflow
+ */
+
+.tabbrowser-tab {
+    min-width: 16px !important;
+    clip-width: 16px !important;
+}
