@@ -37,9 +37,6 @@ user_pref("browser.onboarding.enabled", false);
 // Enable spellchecker
 user_pref("layout.spellcheckDefault", 2);
 
-// Disable media autoplay
-user_pref("media.autoplay.enabled", true);
-
 // Enable click to play for plugins
 user_pref("plugins.click_to_play", true);
 
