@@ -22,9 +22,6 @@ user_pref("browser.urlbar.formatting.enabled", false);
 // Set same zoom level for every site
 user_pref("browser.zoom.siteSpecific", false);
 
-// Set "When Firefox starts" to blank page
-user_pref("browser.startup.page", 0);
-
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
@@ -45,6 +42,9 @@ user_pref("media.autoplay.enabled", false);
 
 // Enable click to play for plugins
 user_pref("plugins.click_to_play", true);
+
+// Set "When Firefox starts" to blank page
+user_pref("browser.startup.page", 0);
 
 // Disable new tab page ads and preload
 user_pref("browser.newtab.preload", false);
@@ -133,3 +133,12 @@ user_pref("extensions.pocket.enabled", false);
 
 // Backspace key goes back a page
 user_pref("browser.backspace_action", 0);
+
+// Disable check for default browser
+user_pref("browser.shell.checkDefaultBrowser", false);
+
+//Disable search suggestions in location bar
+user_pref("browser.urlbar.suggest.searches", false);
+
+//Disable closing the window with multiple tabs
+user_pref("browser.tabs.warnOnClose", true);
