@@ -101,7 +101,6 @@ user_pref("privacy.cpd.downloads", true);      // Downloads - This is not listed
 user_pref("privacy.cpd.formdata", true);       // Form & Search History
 user_pref("privacy.cpd.history", true);        // Browsing & Download History
 user_pref("privacy.cpd.offlineApps", true);    // Offline Website Data
-user_pref("privacy.cpd.openWindows", true);    // Open Windows - This is not listed
 user_pref("privacy.cpd.passwords", true);      // Passwords - This is not listed
 user_pref("privacy.cpd.sessions", true);       // Active Logins
 user_pref("privacy.cpd.siteSettings", true);   // Site Preferences
@@ -116,9 +115,8 @@ user_pref("privacy.clearOnShutdown.downloads", true);       // Downloads - This 
 user_pref("privacy.clearOnShutdown.formdata", true);        // Form & Search History
 user_pref("privacy.clearOnShutdown.history", true);         // Browsing & Download History
 user_pref("privacy.clearOnShutdown.offlineApps", true);     // Offline Website Data
-user_pref("privacy.clearOnShutdown.openWindows", true);     // Open Windows - This is not listed
 user_pref("privacy.clearOnShutdown.sessions", true);        // Active Logins
-user_pref("privacy.clearOnShutdown.siteSettings", true);   // Site Preferences
+user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
 
 ////////////////////////////////////////////////////
 //   Misc
