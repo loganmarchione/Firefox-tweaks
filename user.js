@@ -16,12 +16,6 @@ user_pref("browser.urlbar.trimURLs", false);
 // Select all text when clicking once in the URL bar
 user_pref("browser.urlbar.clickSelectsAll", true);
 
-// Disable greying out certain parts of the URL
-user_pref("browser.urlbar.formatting.enabled", false);
-
-// Set same zoom level for every site
-user_pref("browser.zoom.siteSpecific", false);
-
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
@@ -31,14 +25,14 @@ user_pref("media.mediasource.webm.enabled", true);
 // Don't warn when opening about:config
 user_pref("general.warnOnAboutConfig", false);
 
-// Hide onboarding tour
-user_pref("browser.onboarding.enabled", false);
-
-// Enable spellchecker
+// Enable spellchecker on all text fields
 user_pref("layout.spellcheckDefault", 2);
 
 // Enable click to play for plugins
 user_pref("plugins.click_to_play", true);
+
+// Make fullscreen warning go away
+user_pref("full-screen-api.warning.timeout", 0);
 
 // Set "When Firefox starts" to blank page
 user_pref("browser.startup.page", 0);
@@ -53,6 +47,12 @@ user_pref("browser.newtabpage.introShown", true);
 ////////////////////////////////////////////////////
 //   Privacy
 ////////////////////////////////////////////////////
+
+// Hide "Get Add-ons" panel (uses Google Analytics)
+user_pref("extensions.getAddons.showPane", false);
+
+// Hide onboarding tour (uses Google Analytics)
+user_pref("browser.onboarding.enabled", false);
 
 // Disable geolocation
 user_pref("geo.enabled", false);
@@ -132,8 +132,5 @@ user_pref("browser.backspace_action", 0);
 // Disable check for default browser
 user_pref("browser.shell.checkDefaultBrowser", false);
 
-//Disable search suggestions in location bar
+// Disable search suggestions in location bar
 user_pref("browser.urlbar.suggest.searches", false);
-
-//Disable closing the window with multiple tabs
-user_pref("browser.tabs.warnOnClose", true);
