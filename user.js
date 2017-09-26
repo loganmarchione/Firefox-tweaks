@@ -47,6 +47,9 @@ user_pref("browser.newtabpage.introShown", true);
 // Set new tab page to a blank page
 user_pref("browser.newtabpage.activity-stream.enabled", false);
 
+// Combine URL bar and search bar
+user_pref("browser.search.widget.inNavBar", false);
+
 ////////////////////////////////////////////////////
 //   Privacy
 ////////////////////////////////////////////////////
