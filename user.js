@@ -44,6 +44,9 @@ user_pref("browser.newtabpage.enhanced", false);
 user_pref("browser.newtabpage.directory.source", "data:text/plain,{}");
 user_pref("browser.newtabpage.introShown", true);
 
+// Set new tab page to a blank page
+user_pref("browser.newtabpage.activity-stream.enabled", false);
+
 ////////////////////////////////////////////////////
 //   Privacy
 ////////////////////////////////////////////////////
