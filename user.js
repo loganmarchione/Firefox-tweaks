@@ -69,6 +69,9 @@ user_pref("webgl.disabled", true);
 // Show punycode
 user_pref("network.IDN_show_punycode", true);
 
+// Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
+user_pref("network.proxy.socks_remote_dns", true);
+
 // Disable WebRTC
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.navigator.enabled", false);
