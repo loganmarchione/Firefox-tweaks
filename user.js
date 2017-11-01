@@ -76,9 +76,6 @@ user_pref("network.proxy.socks_remote_dns", true);
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.navigator.enabled", false);
 
-// Resist fingerprinting
-user_pref("privacy.resistFingerprinting", true);
-
 // Send a DO NOT TRACK (DNT) header
 user_pref("privacy.donottrackheader.enabled", true);
 
