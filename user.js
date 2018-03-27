@@ -58,6 +58,9 @@ user_pref("findbar.modalHighlight", true);
 //   Privacy
 ////////////////////////////////////////////////////
 
+// Disable creating thumbnails from each page
+user_pref("browser.pagethumbnails.capturing_disabled", true);
+
 // Hide "Get Add-ons" panel (uses Google Analytics)
 user_pref("extensions.getAddons.showPane", false);
 
