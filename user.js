@@ -50,6 +50,10 @@ user_pref("browser.newtabpage.activity-stream.enabled", false);
 // Combine URL bar and search bar
 user_pref("browser.search.widget.inNavBar", false);
 
+// Settings for finding
+user_pref("findbar.highlightAll", true);
+user_pref("findbar.modalHighlight", true);
+
 ////////////////////////////////////////////////////
 //   Privacy
 ////////////////////////////////////////////////////
