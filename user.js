@@ -54,9 +54,16 @@ user_pref("browser.search.widget.inNavBar", false);
 user_pref("findbar.highlightAll", true);
 user_pref("findbar.modalHighlight", true);
 
+// Change session restore from 15 seconds to 45 seconds, writes less to disk
+user_pref("browser.sessionstore.interval", 45000);
+
 ////////////////////////////////////////////////////
 //   Privacy
 ////////////////////////////////////////////////////
+
+// Turn off search suggestions (so everything you type into the address bar doesn't go straight to Google)
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
 
 // Disable creating thumbnails from each page
 user_pref("browser.pagethumbnails.capturing_disabled", true);
@@ -81,7 +88,10 @@ user_pref("network.proxy.socks_remote_dns", true);
 
 // Disable WebRTC
 user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.video.enabled", false);
+user_pref("media.peerconnection.identity.enabled", false);
 user_pref("media.navigator.enabled", false);
+user_pref("media.navigator.video.enabled", false)
 
 // Send a DO NOT TRACK (DNT) header
 user_pref("privacy.donottrackheader.enabled", true);
@@ -100,6 +110,7 @@ user_pref("browser.formfill.enable", false);
 user_pref("signon.autofillForms", false);
 
 // Disable autofill
+user_pref("extensions.formautofill.available", "off");
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
@@ -144,6 +155,3 @@ user_pref("browser.backspace_action", 0);
 
 // Disable check for default browser
 user_pref("browser.shell.checkDefaultBrowser", false);
-
-// Disable search suggestions in location bar
-user_pref("browser.urlbar.suggest.searches", false);
