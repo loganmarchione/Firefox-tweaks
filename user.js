@@ -65,8 +65,10 @@ user_pref("browser.sessionstore.interval", 60000);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 
-// Opt-out of Shield studies
+// Opt-out of Shield studies and Normandy
 user_pref("app.shield.optoutstudies.enabled", false);
+user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.api_url", "");
 
 // Disable creating thumbnails from each page
 user_pref("browser.pagethumbnails.capturing_disabled", true);
