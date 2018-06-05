@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////
 //
 // These settings are mostly cosmetic and privacy related.
-// I don't believe in changing "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.
+// I don't believe in changing many "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.
 //
 
 ////////////////////////////////////////////////////
@@ -54,8 +54,8 @@ user_pref("browser.search.widget.inNavBar", false);
 user_pref("findbar.highlightAll", true);
 user_pref("findbar.modalHighlight", true);
 
-// Change session restore from 15 seconds to 45 seconds, writes less to disk
-user_pref("browser.sessionstore.interval", 45000);
+// Change session restore from default of 15 seconds, writes less to disk
+user_pref("browser.sessionstore.interval", 60000);
 
 ////////////////////////////////////////////////////
 //   Privacy
@@ -64,6 +64,9 @@ user_pref("browser.sessionstore.interval", 45000);
 // Turn off search suggestions (so everything you type into the address bar doesn't go straight to Google)
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
+
+// Opt-out of Shield studies
+user_pref("app.shield.optoutstudies.enabled", false);
 
 // Disable creating thumbnails from each page
 user_pref("browser.pagethumbnails.capturing_disabled", true);
@@ -141,6 +144,23 @@ user_pref("privacy.clearOnShutdown.history", true);         // Browsing & Downlo
 user_pref("privacy.clearOnShutdown.offlineApps", true);     // Offline Website Data
 user_pref("privacy.clearOnShutdown.sessions", true);        // Active Logins
 user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
+
+////////////////////////////////////////////////////
+//   Performance
+////////////////////////////////////////////////////
+
+// Enable memory cache and set size
+user_pref("browser.cache.memory.enable", true);
+user_pref("browser.cache.memory.capacity", 1048576);   // 1GB
+user_pref("browser.cache.memory.max_entry_size", -1);  // Default=5120
+
+// Disable disk cache
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.max_entry_size", 0);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.disk_cache_ssl", false);
 
 ////////////////////////////////////////////////////
 //   Misc
