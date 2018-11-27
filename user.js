@@ -103,7 +103,6 @@ user_pref("privacy.donottrackheader.enabled", true);
 
 // Turn on tracking protection and the corresponding UI
 user_pref("privacy.trackingprotection.enabled", true);
-user_pref("privacy.trackingprotection.ui.enabled", true);
 
 // Disable remember passwords
 user_pref("signon.rememberSignons", false);
