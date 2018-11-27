@@ -9,29 +9,46 @@
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 ////////////////////////////////////////////////////
-//   Cosmetic
+//   URL bar
 ////////////////////////////////////////////////////
 
 // Select all text when clicking once in the URL bar
 user_pref("browser.urlbar.clickSelectsAll", true);
 
+// Combine URL bar and search bar
+user_pref("browser.search.widget.inNavBar", false);
+
+// Show punycode
+user_pref("network.IDN_show_punycode", true);
+
+// Turn off search suggestions so you don't leak everything from the URL bar to a search engine
+user_pref("keyword.enabled", false);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
+
+// Don't try to guess TLDs if one isn't entered
+user_pref("browser.fixup.alternate.enabled", false);
+
+// Don't trim HTTP/HTTPS off of URLs in the address bar
+user_pref("browser.urlbar.trimURLs", false);
+
+////////////////////////////////////////////////////
+//   Reading
+////////////////////////////////////////////////////
+
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
-// Enable WebM
-user_pref("media.mediasource.webm.enabled", true);
-
-// Don't warn when opening about:config
-user_pref("general.warnOnAboutConfig", false);
+// Settings for finding
+user_pref("findbar.highlightAll", true);
+user_pref("findbar.modalHighlight", true);
 
 // Enable spellchecker on all text fields
 user_pref("layout.spellcheckDefault", 2);
 
-// Enable click to play for plugins
-user_pref("plugins.click_to_play", true);
-
-// Make fullscreen warning go away
-user_pref("full-screen-api.warning.timeout", 0);
+////////////////////////////////////////////////////
+//   Startup and new pages/windows
+////////////////////////////////////////////////////
 
 // Set "When Firefox starts" to blank page
 user_pref("browser.startup.page", 0);
@@ -46,29 +63,28 @@ user_pref("browser.newtabpage.introShown", true);
 
 // Set new tab page to a blank page
 user_pref("browser.newtabpage.activity-stream.enabled", false);
+// Disable Activity Stream recent Highlights in the Library
+user_pref("browser.library.activity-stream.enabled", false);
 // Disable Activity Stream telemetry
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+// Disable Activity Stream Web Search
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+// Disable Activity Stream Top Sites
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+// Disable Activity Stream Pocket content
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+// Disable Activity Stream Highlights
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights, false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks, false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads, false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited, false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 // Disable Activity Stream Snippets
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-// Disable Activity Stream Top Stories, Pocket-based and/or sponsored content
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-// Disable Activity Stream recent Highlights in the Library
-user_pref("browser.library.activity-stream.enabled", false);
-
-// Combine URL bar and search bar
-user_pref("browser.search.widget.inNavBar", false);
-
-// Settings for finding
-user_pref("findbar.highlightAll", true);
-user_pref("findbar.modalHighlight", true);
-
-// Change session restore from default of 15 seconds, writes less to disk
-user_pref("browser.sessionstore.interval", 60000);
 
 ////////////////////////////////////////////////////
 //   Privacy
@@ -105,23 +121,8 @@ user_pref("browser.onboarding.enabled", false);
 // Disable geolocation
 user_pref("geo.enabled", false);
 
-// Disable WebGl
+// Disable WebGL
 user_pref("webgl.disabled", true);
-
-// Turn off search suggestions so you don't leak everything from the URL bar to a search engine
-user_pref("keyword.enabled", false);
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.urlbar.suggest.searches", false);
-// Don't try to guess TLDs if one isn't entered
-user_pref("browser.fixup.alternate.enabled", false);
-// Don't trim HTTP/HTTPS off of URLs in the address bar
-user_pref("browser.urlbar.trimURLs", false);
-
-// Show punycode
-user_pref("network.IDN_show_punycode", true);
-
-// Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
-user_pref("network.proxy.socks_remote_dns", true);
 
 // Disable WebRTC
 user_pref("media.peerconnection.enabled", false);
@@ -129,6 +130,9 @@ user_pref("media.peerconnection.video.enabled", false);
 user_pref("media.peerconnection.identity.enabled", false);
 user_pref("media.navigator.enabled", false);
 user_pref("media.navigator.video.enabled", false)
+
+// Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
+user_pref("network.proxy.socks_remote_dns", true);
 
 // Send a DO NOT TRACK (DNT) header
 user_pref("privacy.donottrackheader.enabled", true);
@@ -182,6 +186,9 @@ user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
 //   Performance
 ////////////////////////////////////////////////////
 
+// Change session restore from default of 15 seconds, writes less to disk
+user_pref("browser.sessionstore.interval", 60000);
+
 // Enable memory cache and set size
 user_pref("browser.cache.memory.enable", true);
 user_pref("browser.cache.memory.capacity", 1048576);   // 1GB
@@ -208,3 +215,15 @@ user_pref("browser.backspace_action", 0);
 
 // Disable check for default browser
 user_pref("browser.shell.checkDefaultBrowser", false);
+
+// Make fullscreen warning go away
+user_pref("full-screen-api.warning.timeout", 0);
+
+// Enable WebM
+user_pref("media.mediasource.webm.enabled", true);
+
+// Don't warn when opening about:config
+user_pref("general.warnOnAboutConfig", false);
+
+// Enable click to play for plugins
+user_pref("plugins.click_to_play", true);
