@@ -36,6 +36,7 @@ user_pref("full-screen-api.warning.timeout", 0);
 
 // Set "When Firefox starts" to blank page
 user_pref("browser.startup.page", 0);
+user_pref("browser.startup.homepage", "about:blank")
 
 // Disable new tab page ads and preload
 user_pref("browser.newtab.preload", false);
@@ -69,6 +70,9 @@ user_pref("browser.urlbar.suggest.searches", false);
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
+
+// Disable Flash
+user_pref("plugin.state.flash", 0);
 
 // Disable creating thumbnails from each page
 user_pref("browser.pagethumbnails.capturing_disabled", true);
