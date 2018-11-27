@@ -3,15 +3,14 @@
 ////////////////////////////////////////////////////
 //
 // These settings are mostly cosmetic and privacy related.
-// I don't believe in changing many "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.
+// I don't believe in changing many "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, changing them causes more harm than good.
 //
+// Plenty of settings taken from here, make sure you take a look
+// https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 ////////////////////////////////////////////////////
 //   Cosmetic
 ////////////////////////////////////////////////////
-
-// Don't trim HTTP/HTTPS off of URLs in the address bar
-user_pref("browser.urlbar.trimURLs", false);
 
 // Select all text when clicking once in the URL bar
 user_pref("browser.urlbar.clickSelectsAll", true);
@@ -39,14 +38,27 @@ user_pref("browser.startup.page", 0);
 user_pref("browser.startup.homepage", "about:blank")
 
 // Disable new tab page ads and preload
-user_pref("browser.newtab.preload", false);
 user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtab.preload", false);
 user_pref("browser.newtabpage.enhanced", false);
 user_pref("browser.newtabpage.directory.source", "data:text/plain,{}");
 user_pref("browser.newtabpage.introShown", true);
 
 // Set new tab page to a blank page
 user_pref("browser.newtabpage.activity-stream.enabled", false);
+// Disable Activity Stream telemetry
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+// Disable Activity Stream Snippets
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+// Disable Activity Stream Top Stories, Pocket-based and/or sponsored content
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+// Disable Activity Stream recent Highlights in the Library
+user_pref("browser.library.activity-stream.enabled", false);
 
 // Combine URL bar and search bar
 user_pref("browser.search.widget.inNavBar", false);
@@ -62,14 +74,21 @@ user_pref("browser.sessionstore.interval", 60000);
 //   Privacy
 ////////////////////////////////////////////////////
 
-// Turn off search suggestions (so everything you type into the address bar doesn't go straight to Google)
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.urlbar.suggest.searches", false);
+// Enable Container tabs
+user_pref("privacy.userContext.enabled", true);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 
 // Opt-out of Shield studies and Normandy
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
+
+// Opt-out of Experiments
+user_pref("network.allow-experiments", false);
+
+// Disable "Upload" feature on Screenshots
+user_pref("extensions.screenshots.upload-disabled", true);
 
 // Disable Flash
 user_pref("plugin.state.flash", 0);
@@ -88,6 +107,15 @@ user_pref("geo.enabled", false);
 
 // Disable WebGl
 user_pref("webgl.disabled", true);
+
+// Turn off search suggestions so you don't leak everything from the URL bar to a search engine
+user_pref("keyword.enabled", false);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
+// Don't try to guess TLDs if one isn't entered
+user_pref("browser.fixup.alternate.enabled", false);
+// Don't trim HTTP/HTTPS off of URLs in the address bar
+user_pref("browser.urlbar.trimURLs", false);
 
 // Show punycode
 user_pref("network.IDN_show_punycode", true);
