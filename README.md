@@ -33,7 +33,9 @@ I won't waste a bunch of time explaining what DNS over HTTPS is, you can read th
 I personally don't have these settings in my user.js file, as I set all my DNS settings on my router, but I have included them below if you're interested.
 
 ### User.js settings
-user_pref("network.trr.mode", 3);  
-user_pref("netwok.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");  
-user_pref("network.trr.bootstrapAddress", "1.1.1.1");  
+```
+user_pref("network.trr.mode", 3);
+user_pref("netwok.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
+user_pref("network.trr.bootstrapAddress", "1.1.1.1");
+```
 
