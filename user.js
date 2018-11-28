@@ -77,10 +77,10 @@ user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 // Disable Activity Stream Highlights
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights, false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks, false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads, false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited, false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 // Disable Activity Stream Snippets
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
