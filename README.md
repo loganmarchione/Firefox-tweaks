@@ -21,3 +21,17 @@ Firefox [userChrome.css](http://kb.mozillazine.org/UserChrome.css) settings file
 
 ### Creation
 In Firefox [profile folder](http://kb.mozillazine.org/Profile_folder_-_Firefox), create new directory called "chrome", then create empty "userChrome.css" file
+
+
+## DNS over HTTPS (DoH)
+
+### Introduction
+I won't waste a bunch of time explaining what DNS over HTTPS is, you can read the wiki [here](https://en.wikipedia.org/wiki/DNS_over_HTTPS). DoH attempts to solve two problems:
+1. When you visit a website, even if the website content is encrypted (HTTPS), your ISP knows you are attempting to visit the site because your DNS requests are not encrypted
+1. Because encryption is not used, it's possible that the IP you receive from the DNS server is vulnerable to a man-in-the-middle attack.
+
+### about:config settings
+network.trr.mode = 3
+netwok.trr.uri = https://mozilla.cloudflare-dns.com/dns-query
+network.trr.bootstrapAddress = 1.1.1.1
+
