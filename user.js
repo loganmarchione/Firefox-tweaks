@@ -140,6 +140,9 @@ user_pref("privacy.donottrackheader.enabled", true);
 // Turn on tracking protection and the corresponding UI
 user_pref("privacy.trackingprotection.enabled", true);
 
+// Turn on cryptomining protection
+user_pref("privacy.trackingprotection.cryptomining.enabled", true);
+
 // Disable remember passwords
 user_pref("signon.rememberSignons", false);
 
