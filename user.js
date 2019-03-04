@@ -144,7 +144,7 @@ user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 
 // Block third-party cookies (this might break some stuff)
-user_pref("network.cookie.cookieBehavior, 1);
+user_pref("network.cookie.cookieBehavior", 1);
 
 // Disable remember passwords
 user_pref("signon.rememberSignons", false);
