@@ -35,7 +35,7 @@ I personally don't have these settings in my user.js file, as I set all my DNS s
 ### User.js settings
 ```
 user_pref("network.trr.mode", 3);
-user_pref("netwok.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
+user_pref("network.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
 user_pref("network.trr.bootstrapAddress", "1.1.1.1");
 ```
 
