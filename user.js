@@ -146,6 +146,9 @@ user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 // Block third-party cookies (this might break some stuff)
 user_pref("network.cookie.cookieBehavior", 1);
 
+// Do not use the host PC's certificates, instead, use Firefox's built-in certificate list
+user_pref("security.enterprise_roots.enabled", false);
+
 // Disable remember passwords
 user_pref("signon.rememberSignons", false);
 
