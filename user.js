@@ -228,6 +228,10 @@ user_pref("browser.backspace_action", 0);
 // Disable check for default browser
 user_pref("browser.shell.checkDefaultBrowser", false);
 
+// Disable notifications
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+
 // Make fullscreen warning go away
 user_pref("full-screen-api.warning.timeout", 0);
 
