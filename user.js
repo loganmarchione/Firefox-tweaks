@@ -145,6 +145,7 @@ user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 
 // Turn on resist fingerprinting
 user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 
 // Block third-party cookies (this might break some stuff)
 user_pref("network.cookie.cookieBehavior", 1);
