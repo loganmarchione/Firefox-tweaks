@@ -37,10 +37,10 @@ string="loganmarchione"
 basedir="~/.mozilla/firefox/xxxxxxxx.$string"
 
 # URLs of files to get and their output locations
-userjs_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
-userjs_out = "$basedir/user.js"
-userchrome_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/userChrome.css"
-userchrome_out = "$basedir/chrome/userChrome.css"
+userjs_url="https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
+userjs_out="$basedir/user.js"
+userchrome_url="https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/userChrome.css"
+userchrome_out="$basedir/chrome/userChrome.css"
 
 # Create directory for "chrome"
 mkdir -p "$basedir/chrome"
