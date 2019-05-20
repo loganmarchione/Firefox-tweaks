@@ -17,7 +17,6 @@ $basedir = Resolve-Path "$env:appdata\Mozilla\Firefox\Profiles\*.$string" | Sele
 # URLs of files to get and their output locations
 $userjs_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
 $userjs_out = "$basedir\user.js"
-
 $userchrome_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/userChrome.css"
 $userchrome_out = "$basedir\chrome\userChrome.css"
 
@@ -30,8 +29,26 @@ Invoke-WebRequest -Uri $userchrome_url -OutFile $userchrome_out
 ```
 
 ### Linux (run via bash)
+```
+# The special string that our profile contains
+string="loganmarchione"
 
+# The full path for our profile that contains that string
+basedir="~/.mozilla/firefox/xxxxxxxx.$string"
 
+# URLs of files to get and their output locations
+userjs_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
+userjs_out = "$basedir/user.js"
+userchrome_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/userChrome.css"
+userchrome_out = "$basedir/chrome/userChrome.css"
+
+# Create directory for "chrome"
+mkdir -p "$basedir/chrome"
+
+# Download the files
+wget -O $userjs_out $userjs_url
+wget -O $userchrome_out $userchrome_url
+```
 
 ## DNS over HTTPS (DoH)
 
@@ -48,4 +65,3 @@ user_pref("network.trr.mode", 3);
 user_pref("network.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
 user_pref("network.trr.bootstrapAddress", "1.1.1.1");
 ```
-
