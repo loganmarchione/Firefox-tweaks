@@ -85,6 +85,10 @@ user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket",
 // Disable Activity Stream Snippets
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+// Disable recommend add-ons as you browse
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+// Disable recommend features as your browse
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 
 ////////////////////////////////////////////////////
 //   Privacy
