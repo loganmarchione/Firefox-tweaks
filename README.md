@@ -4,23 +4,33 @@
 These settings are mostly cosmetic and privacy related.  
 I don't believe in changing "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.  
 
-## user.js
+## Update files via script
 
-### Usage
-Firefox [user.js](http://kb.mozillazine.org/User.js_file) settings file - Used to set preferences in Firefox 
-  
-### Creation
-In Firefox [profile folder](http://kb.mozillazine.org/Profile_folder_-_Firefox), create new "user.js" file
-  
-**IMPORTANT** - Once an entry for a preference setting exists in the user.js file, any change you make to that setting in the options and preference dialogs or via about:config will be lost when you restart your Mozilla application because the user.js entry will override it.
-  
-## userChrome.css
+### Windows (run via PowerShell)
+```
+# The special string that our profile contains
+$string="loganmarchione"
 
-### Usage
-Firefox [userChrome.css](http://kb.mozillazine.org/UserChrome.css) settings file - Used to change the interface/UI
+# The full path for our profile that contains that string
+$basedir = Resolve-Path "$env:appdata\Mozilla\Firefox\Profiles\*.$string" | Select -ExpandProperty Path
 
-### Creation
-In Firefox [profile folder](http://kb.mozillazine.org/Profile_folder_-_Firefox), create new directory called "chrome", then create empty "userChrome.css" file
+# URLs of files to get and their output locations
+$userjs_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
+$userjs_out = "$basedir\user.js"
+
+$userchrome_url = "https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/userChrome.css"
+$userchrome_out = "$basedir\chrome\userChrome.css"
+
+# Create directory for "chrome"
+New-Item -ItemType Directory -Path "$basedir\chrome"
+
+# Download the files
+Invoke-WebRequest -Uri $userjs_url -OutFile $userjs_out
+Invoke-WebRequest -Uri $userchrome_url -OutFile $userchrome_out
+```
+
+### Linux (run via bash)
+
 
 
 ## DNS over HTTPS (DoH)
