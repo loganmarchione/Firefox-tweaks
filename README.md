@@ -34,7 +34,7 @@ Invoke-WebRequest -Uri $userchrome_url -OutFile $userchrome_out
 string="loganmarchione"
 
 # The full path for our profile that contains that string
-basedir="~/.mozilla/firefox/*.$string"
+basedir=$(find ~/.mozilla/firefox -name "*.$string" -type d)
 
 # URLs of files to get and their output locations
 userjs_url="https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
