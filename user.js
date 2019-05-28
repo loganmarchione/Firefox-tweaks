@@ -237,6 +237,9 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
 
+// Enable loading userChrome.css and userContent.css
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
 // Make fullscreen warning go away
 user_pref("full-screen-api.warning.timeout", 0);
 
