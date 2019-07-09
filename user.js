@@ -94,6 +94,14 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 //   Privacy
 ////////////////////////////////////////////////////
 
+// Disable add-on recommendations
+user_pref("extensions.getAddons.discovery.api_url", "");
+user_pref("extensions.htmlaboutaddons.discover.enabled", false);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+
+// Disable extension recommendations
+user_pref("browser.discovery.enabled", false);
+
 // Enable Container tabs
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
