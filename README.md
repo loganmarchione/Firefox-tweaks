@@ -5,6 +5,8 @@ These settings are mostly cosmetic and privacy related.
 I don't believe in changing "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.  
 
 ## Update files via script
+First, create a new Firefox profile from _about:profiles_ using a unique string. For example, mine is "loganmarchione".
+Then, use either the Windows or Linux commands below to download my files to your machine. Change the _$string_ variable as needed.
 
 ### Windows (run via PowerShell)
 ```
