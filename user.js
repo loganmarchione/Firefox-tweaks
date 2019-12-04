@@ -40,6 +40,9 @@ user_pref("security.insecure_connection_text.enabled", true);
 //   User experience (UX) and user interface (UI)
 ////////////////////////////////////////////////////
 
+// Don't warn when opening about:config 
+user_pref("browser.aboutConfig.showWarning", false);  // for the new HTML version [FF71+]
+
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
@@ -229,9 +232,6 @@ user_pref("extensions.pocket.enabled", false);
 // Disable notifications
 user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
-
-// Don't warn when opening about:config 
-user_pref("browser.aboutConfig.showWarning", false);  // for the new HTML version [FF71+]
 
 // Enable WebM
 user_pref("media.mediasource.webm.enabled", true);
