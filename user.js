@@ -33,7 +33,7 @@ user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.urlbar.trimURLs", false);
 
 ////////////////////////////////////////////////////
-//   Reading
+//   Reading and content
 ////////////////////////////////////////////////////
 
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
@@ -47,19 +47,18 @@ user_pref("findbar.modalHighlight", true);
 user_pref("layout.spellcheckDefault", 2);
 
 ////////////////////////////////////////////////////
-//   Startup and new pages/windows
+//   Startup and new pages/tabs/windows
 ////////////////////////////////////////////////////
 
-// Set "When Firefox starts" to blank page
-user_pref("browser.startup.page", 0);
-user_pref("browser.startup.homepage", "about:blank")
-
-// Disable new tab page ads and preload
-user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.startup.page", 0);                 // Set start page
+user_pref("browser.startup.homepage", "about:blank")  // Set "Homepage and new windows"
+user_pref("browser.newtabpage.enabled", false);       // Set "New tabs"
 user_pref("browser.newtab.preload", false);
-user_pref("browser.newtabpage.enhanced", false);
-user_pref("browser.newtabpage.directory.source", "data:text/plain,{}");
-user_pref("browser.newtabpage.introShown", true);
+user_pref("browser.onboarding.enabled", false);       // Hide onboarding tour (uses Google Analytics)
+
+////////////////////////////////////////////////////
+//   Activity Stream
+////////////////////////////////////////////////////
 
 // Set new tab page to a blank page
 user_pref("browser.newtabpage.activity-stream.enabled", false);
@@ -95,25 +94,22 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 ////////////////////////////////////////////////////
 
 // Disable add-on recommendations
-user_pref("extensions.getAddons.discovery.api_url", "");
+user_pref("extensions.getAddons.showPane", false); // Disable about:addons "Recommendations" (uses Google Analytics) [HIDDEN PREF]
 user_pref("extensions.htmlaboutaddons.discover.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
-// Disable extension recommendations
-user_pref("browser.discovery.enabled", false);
+// Telemetry - Disable extension recommendations
+user_pref("browser.discovery.enabled", false);  // Disable "Allow Firefox to make personalized extension recommendations"
 
-// Enable Container tabs
+// Enable Container tabs and corresponding UI
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
-user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);  // Using private containers for thumbnail loads
 
 // Opt-out of Shield studies and Normandy
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
-
-// Opt-out of Experiments
-user_pref("network.allow-experiments", false);
 
 // Disable "Upload" feature on Screenshots
 user_pref("extensions.screenshots.upload-disabled", true);
@@ -122,16 +118,7 @@ user_pref("extensions.screenshots.upload-disabled", true);
 user_pref("plugin.state.flash", 0);
 
 // Disable creating thumbnails from each page
-user_pref("browser.pagethumbnails.capturing_disabled", true);
-
-// Hide "Get Add-ons" panel (uses Google Analytics)
-user_pref("extensions.getAddons.showPane", false);
-
-// Hide onboarding tour (uses Google Analytics)
-user_pref("browser.onboarding.enabled", false);
-
-// Disable geolocation
-user_pref("geo.enabled", false);
+user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
 
 // Disable WebGL
 user_pref("webgl.disabled", true);
@@ -146,39 +133,24 @@ user_pref("media.navigator.video.enabled", false)
 // Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
 user_pref("network.proxy.socks_remote_dns", true);
 
-// Send a DO NOT TRACK (DNT) header
-user_pref("privacy.donottrackheader.enabled", true);
-
-// Turn on tracking protection and the corresponding UI
-user_pref("privacy.trackingprotection.enabled", true);
-
-// Turn on cryptomining protection
-user_pref("privacy.trackingprotection.cryptomining.enabled", true);
-
-// Turn on resist fingerprinting
-user_pref("privacy.resistFingerprinting", true);
-user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
-
-// Block third-party cookies (this might break some stuff)
-user_pref("network.cookie.cookieBehavior", 1);
-
 // Do not use the host PC's certificates, instead, use Firefox's built-in certificate list
 user_pref("security.enterprise_roots.enabled", false);
 
-// Disable remember passwords
-user_pref("signon.rememberSignons", false);
+////////////////////////////////////////////////////
+//   Passwords and Forms
+////////////////////////////////////////////////////
 
-// Disable form autofill
-user_pref("browser.formfill.enable", false);
-
-// Disable autofill username and passwords in form fields
-user_pref("signon.autofillForms", false);
-
-// Disable autofill
+user_pref("signon.rememberSignons", false);   // Disable Ask to save logins and passwords for websites"
+user_pref("signon.autofillForms", false);     // Disable "Autofill logins and passwords"
+user_pref("browser.formfill.enable", false);  // Disable "Remember search and form history"
 user_pref("extensions.formautofill.available", "off");
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
+
+////////////////////////////////////////////////////
+//   History
+////////////////////////////////////////////////////
 
 // Set time range to "Everything" as default in "Clear Recent History" when pressing Ctrl+Shift+H
 user_pref("privacy.sanitize.timeSpan", 0);
@@ -186,7 +158,7 @@ user_pref("privacy.sanitize.timeSpan", 0);
 // Check all the boxes by default in "Clear Recent History" when pressing Ctrl+Shift+H
 user_pref("privacy.cpd.cache", true);          // Cache
 user_pref("privacy.cpd.cookies", true);        // Cookies
-user_pref("privacy.cpd.downloads", true);      // Downloads - This is not listed
+user_pref("privacy.cpd.downloads", true);      // Downloads [HIDDEN PREF]
 user_pref("privacy.cpd.formdata", true);       // Form & Search History
 user_pref("privacy.cpd.history", true);        // Browsing & Download History
 user_pref("privacy.cpd.offlineApps", true);    // Offline Website Data
@@ -208,11 +180,22 @@ user_pref("privacy.clearOnShutdown.sessions", true);        // Active Logins
 user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
 
 ////////////////////////////////////////////////////
-//   Performance
+//   Tracking
 ////////////////////////////////////////////////////
 
-// Change session restore from default of 15 seconds, writes less to disk
-user_pref("browser.sessionstore.interval", 60000);
+user_pref("privacy.donottrackheader.enabled", true);                     // Send a DO NOT TRACK (DNT) header
+user_pref("privacy.trackingprotection.enabled", true);                   // Turn on tracking protection
+user_pref("privacy.trackingprotection.cryptomining.enabled", true);      // Enable cryptomining protection
+user_pref("privacy.resistFingerprinting", true);                         // Enable fingerprint protection
+user_pref("privacy.trackingprotection.fingerprinting.enabled", true);    // Enable fingerprint protection 
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);    // Enable social protection
+
+////////////////////////////////////////////////////
+//   Cache
+////////////////////////////////////////////////////
+
+// Change session restore from default of 15 seconds, writes less to disk/memory
+user_pref("browser.sessionstore.interval", 60000);     // 1min
 
 // Enable memory cache and set size
 user_pref("browser.cache.memory.enable", true);
@@ -232,7 +215,6 @@ user_pref("browser.cache.disk_cache_ssl", false);
 ////////////////////////////////////////////////////
 
 // Disable Pocket
-user_pref("browser.pocket.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 
 // Backspace key goes back a page
@@ -255,7 +237,11 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("media.mediasource.webm.enabled", true);
 
 // Don't warn when opening about:config
-user_pref("general.warnOnAboutConfig", false);
+user_pref("browser.aboutConfig.showWarning", false); // for the new HTML version [FF71+]
+
+// Display "Not Secure" icon and text on HTTP websites
+user_pref("security.insecure_connection_icon.enabled", true);
+user_pref("security.insecure_connection_text.enabled", true);
 
 // Enable click to play for plugins
 user_pref("plugins.click_to_play", true);
