@@ -17,13 +17,6 @@
 }
 
 /*
- * Round the URL bar
- */
-#urlbar {
-  border-radius: 2em !important;
-}
-
-/*
  * Hide "go" arrow button in the address bar
  */
 .urlbar-go-button {
