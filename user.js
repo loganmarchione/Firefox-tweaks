@@ -68,7 +68,7 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
 user_pref("browser.shell.checkDefaultBrowser", false); // Disable check for default browser
 user_pref("browser.startup.page", 0);                  // Set start page
-user_pref("browser.startup.homepage", "about:blank")   // Set "Homepage and new windows"
+user_pref("browser.startup.homepage", "about:blank");  // Set "Homepage and new windows"
 user_pref("browser.newtabpage.enabled", false);        // Set "New tabs"
 user_pref("browser.newtab.preload", false);
 user_pref("browser.onboarding.enabled", false);        // Hide onboarding tour (uses Google Analytics)
@@ -140,7 +140,7 @@ user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.video.enabled", false);
 user_pref("media.peerconnection.identity.enabled", false);
 user_pref("media.navigator.enabled", false);
-user_pref("media.navigator.video.enabled", false)
+user_pref("media.navigator.video.enabled", false);
 
 // Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
 user_pref("network.proxy.socks_remote_dns", true);
