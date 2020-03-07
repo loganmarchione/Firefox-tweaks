@@ -5,8 +5,9 @@ These settings are mostly cosmetic and privacy related.
 I don't believe in changing "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.  
 
 ## Update files via script
-First, create a new Firefox profile from _about:profiles_ using a unique string. For example, mine is "loganmarchione".
-Then, use either the Windows or Linux commands below to download my files to your machine. Change the _$string_ variable as needed.
+
+1. Create a new Firefox profile from _about:profiles_ using a unique string. For example, mine is "loganmarchione".
+2. Use either the Windows or Linux commands below to download my files to your machine. Change the _$string_ variable as needed.
 
 ### Windows (run via PowerShell)
 ```
@@ -50,20 +51,4 @@ mkdir -p "$basedir/chrome"
 # Download the files
 wget -O $userjs_out $userjs_url
 wget -O $userchrome_out $userchrome_url
-```
-
-## DNS over HTTPS (DoH)
-
-### Introduction
-I won't waste a bunch of time explaining what DNS over HTTPS is, you can read the wiki [here](https://en.wikipedia.org/wiki/DNS_over_HTTPS). DoH attempts to solve two problems:
-1. When you visit a website, even if the website content is encrypted (HTTPS), your ISP knows you are attempting to visit the site because your DNS requests are not encrypted.
-1. Because encryption is not used, it's possible that the IP you receive from the DNS server is vulnerable to a man-in-the-middle attack.
-
-I personally don't have these settings in my user.js file, as I set all my DNS settings on my router, but I have included them below if you're interested.
-
-### User.js settings
-```
-user_pref("network.trr.mode", 3);
-user_pref("network.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
-user_pref("network.trr.bootstrapAddress", "1.1.1.1");
 ```
