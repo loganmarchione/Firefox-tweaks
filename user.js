@@ -12,9 +12,6 @@
 //   URL bar
 ////////////////////////////////////////////////////
 
-// Select all text when clicking once in the URL bar
-user_pref("browser.urlbar.clickSelectsAll", true);
-
 // Combine URL bar and search bar
 user_pref("browser.search.widget.inNavBar", false);
 
