@@ -106,12 +106,13 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 ////////////////////////////////////////////////////
 
 // Disable add-on recommendations
-user_pref("extensions.getAddons.showPane", false); // Disable about:addons "Recommendations" (uses Google Analytics) [HIDDEN PREF]
+user_pref("extensions.getAddons.showPane", false);  // Disable about:addons "Recommendations" (uses Google Analytics) [HIDDEN PREF]
 user_pref("extensions.htmlaboutaddons.discover.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
 // Telemetry - Disable extension recommendations
 user_pref("browser.discovery.enabled", false);  // Disable "Allow Firefox to make personalized extension recommendations"
+user_pref("datareporting.healthreport.uploadEnabled", false);  // Disable "Allow Firefox to send technical and interaction data to Mozilla"
 
 // Enable Container tabs and corresponding UI
 user_pref("privacy.userContext.enabled", true);
