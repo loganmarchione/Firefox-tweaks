@@ -140,6 +140,9 @@ user_pref("media.peerconnection.identity.enabled", false);
 user_pref("media.navigator.enabled", false);
 user_pref("media.navigator.video.enabled", false);
 
+// Disable DNS-over-HTTPS because I want to use my internal DNS resolver
+user_pref("network.trr.mode", 5);
+
 // Make sure DNS is sent through the proxy server when using a SOCKS v5 proxy
 user_pref("network.proxy.socks_remote_dns", true);
 
