@@ -98,6 +98,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
 // Disable other stuff
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 
@@ -242,6 +243,3 @@ user_pref("media.mediasource.webm.enabled", true);
 
 // Disable Flash
 user_pref("plugin.state.flash", 0);
-
-// Disable sponsored top sites
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
