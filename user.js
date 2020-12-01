@@ -242,3 +242,6 @@ user_pref("media.mediasource.webm.enabled", true);
 
 // Disable Flash
 user_pref("plugin.state.flash", 0);
+
+// Disable sponsored top sites
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
