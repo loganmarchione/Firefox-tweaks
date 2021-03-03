@@ -59,6 +59,9 @@ user_pref("browser.tabs.drawInTitlebar", true);
 // Enable loading userChrome.css and userContent.css
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
+// Disable Ctrl+Q quit shortcut
+user_pref("browser.quitShortcut.disabled", true);
+
 ////////////////////////////////////////////////////
 //   Startup and new pages/tabs/windows
 ////////////////////////////////////////////////////
