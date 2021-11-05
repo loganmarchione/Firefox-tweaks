@@ -62,6 +62,9 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 // Disable Ctrl+Q quit shortcut
 user_pref("browser.quitShortcut.disabled", true);
 
+// Warn when closing multiple tabs
+user_pref("browser.tabs.warnOnClose", true);
+
 ////////////////////////////////////////////////////
 //   Startup and new pages/tabs/windows
 ////////////////////////////////////////////////////
