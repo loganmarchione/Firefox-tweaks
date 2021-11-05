@@ -212,6 +212,8 @@ user_pref("privacy.trackingprotection.cryptomining.enabled", true);      // Enab
 user_pref("privacy.resistFingerprinting", true);                         // Enable fingerprint protection
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);    // Enable fingerprint protection 
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);    // Enable social protection
+user_pref("privacy.globalprivacycontrol.enabled", true);                 // Successor to DNT
+user_pref("privacy.globalprivacycontrol.functionality.enabled", true);   // Successor to DNT
 
 ////////////////////////////////////////////////////
 //   Cache
