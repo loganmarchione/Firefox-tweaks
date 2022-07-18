@@ -126,6 +126,10 @@ user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);  // Using private containers for thumbnail loads
 
+// Enable URL query stripping in regular and private browsing modes
+user_pref("privacy.query_stripping.enabled", true);
+user_pref("privacy.query_stripping.enabled.pbmode", true);
+
 // Opt-out of Shield studies and Normandy
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
