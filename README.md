@@ -1,5 +1,7 @@
 # Firefox tweaks
 
+This was originally based on some settings from the [ghacks repo](https://github.com/ghacksuserjs/ghacks-user.js/) (which now redirects to arkenfox)
+
 ## Overview
 These settings are mostly cosmetic and privacy related.  
 I don't believe in changing "performance" settings. If they were beneficial, Firefox would ship them by default. Most of the time, they cause more harm than good.  
