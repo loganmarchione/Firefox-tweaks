@@ -255,3 +255,6 @@ user_pref("media.mediasource.webm.enabled", true);
 
 // Disable Flash
 user_pref("plugin.state.flash", 0);
+
+// Enable translations
+user_pref("browser.translations.enable", true);
