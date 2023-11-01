@@ -29,8 +29,7 @@ user_pref("browser.fixup.alternate.enabled", false);
 // Don't trim HTTP/HTTPS off of URLs in the address bar
 user_pref("browser.urlbar.trimURLs", false);
 
-// Display "Not Secure" icon and text on HTTP websites
-user_pref("security.insecure_connection_icon.enabled", true);
+// Display "Not Secure" text on HTTP websites
 user_pref("security.insecure_connection_text.enabled", true);
 
 ////////////////////////////////////////////////////
