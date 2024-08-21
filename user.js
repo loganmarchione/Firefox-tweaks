@@ -22,6 +22,8 @@ user_pref("network.IDN_show_punycode", true);
 user_pref("keyword.enabled", false);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 
 // Don't try to guess TLDs if one isn't entered
 user_pref("browser.fixup.alternate.enabled", false);
