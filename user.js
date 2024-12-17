@@ -211,7 +211,6 @@ user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
 //   Tracking
 ////////////////////////////////////////////////////
 
-user_pref("privacy.donottrackheader.enabled", true);                     // Send a DO NOT TRACK (DNT) header
 user_pref("privacy.trackingprotection.enabled", true);                   // Turn on tracking protection
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);      // Enable cryptomining protection
 user_pref("privacy.resistFingerprinting", true);                         // Enable fingerprint protection
