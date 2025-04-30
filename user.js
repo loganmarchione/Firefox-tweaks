@@ -213,7 +213,8 @@ user_pref("privacy.clearOnShutdown.siteSettings", true);    // Site Preferences
 
 user_pref("privacy.trackingprotection.enabled", true);                   // Turn on tracking protection
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);      // Enable cryptomining protection
-user_pref("privacy.resistFingerprinting", true);                         // Enable fingerprint protection
+// turn this off for now, it's breaking sites and my timezone
+// user_pref("privacy.resistFingerprinting", true);                       // Enable fingerprint protection
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);    // Enable fingerprint protection 
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);    // Enable social protection
 user_pref("privacy.globalprivacycontrol.enabled", true);                 // Successor to DNT
