@@ -112,6 +112,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 ////////////////////////////////////////////////////
 //   AI/ML
 ////////////////////////////////////////////////////
+
 user_pref("browser.ml.enable", false);
 user_pref("browser.ml.chat.enabled", false);
 user_pref("browser.ml.chat.sidebar", false);
