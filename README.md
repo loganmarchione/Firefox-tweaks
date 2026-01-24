@@ -38,8 +38,15 @@ Invoke-WebRequest -Uri $userchrome_url -OutFile $userchrome_out
 # The special string that our profile contains
 string="loganmarchione"
 
+# Detect Firefox directory (XDG base directory support added in FF 147)
+if [ -d ~/.config/mozilla/firefox ]; then
+    firefox_dir=~/.config/mozilla/firefox
+else
+    firefox_dir=~/.mozilla/firefox
+fi
+
 # The full path for our profile that contains that string
-basedir=$(find ~/.mozilla/firefox -name "*.$string" -type d)
+basedir=$(find "$firefox_dir" -name "*.$string" -type d)
 
 # URLs of files to get and their output locations
 userjs_url="https://raw.githubusercontent.com/loganmarchione/Firefox-tweaks/master/user.js"
