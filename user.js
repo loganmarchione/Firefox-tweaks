@@ -114,14 +114,18 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 ////////////////////////////////////////////////////
 
 user_pref("browser.ml.enable", false);
-user_pref("browser.ml.chat.enabled", false);
-user_pref("browser.ml.chat.sidebar", false);
-user_pref("browser.ml.chat.menu", false);
-user_pref("browser.ml.chat.page", false);
-user_pref("browser.ml.linkPreview.enabled", false);
-user_pref("browser.ml.pageAssist.enabled", false);
-user_pref("browser.ml.smartAssist.enabled", false);
-user_pref("browser.tabs.groups.smart.enabled", false);
+user_pref("browser.ml.chat.enabled", false);           // Disable chatbot functionality
+user_pref("browser.ml.chat.shortcuts", false);         // Disable chat from selected text
+user_pref("browser.ml.chat.sidebar", false);           // Remove the AI chat from the sidebar
+user_pref("browser.ml.chat.menu", false);              // Remove the right-click menu option to chat about this
+user_pref("browser.ml.chat.page", false);              // Disable chat menu
+user_pref("browser.ml.chat.page.footerBadge", false);  // Disable the floating badge at the bottom of the page
+user_pref("browser.ml.chat.page.menuBadge", false);    // Disable the "Ask AI" badge
+user_pref("browser.ml.linkPreview.enabled", false);    // Disable AI generated link previews
+user_pref("browser.ml.pageAssist.enabled", false);     // Disable AI page summarizer
+user_pref("browser.ml.smartAssist.enabled", false);    // Disable Smart Assist
+user_pref("extensions.ml.enabled", false);             // Prevent extensions from accessing AI
+user_pref("browser.tabs.groups.smart.enabled", false); // Disable AI tab grouping
 
 ////////////////////////////////////////////////////
 //   Privacy
